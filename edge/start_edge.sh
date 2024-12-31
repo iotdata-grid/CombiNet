@@ -1,0 +1,2 @@
+docker rm -f combinet_edge_test
+docker run -it --name combinet_edge_test -e ECCI_PUB_TARGETS="{'cloud': 'RANDOMSTRING'}" -e ECCI_CONTAINER_TYPE=cloud -e ECCI_APP_ID=RANDOMSTRING -e ECCI_CONTAINER_NAME=edge -e ECCI_LOCAL_CONTAINERS="['RANDOMSTRING']" -e ECCI_LOCAL_BROKER_IP=$YOUR_EMQX_IP$ -e ECCI_LOCAL_BROKER_PORT=$YOUR_EMQX_PORT$ -e ECCI_LOCAL_BROKER_ID=RANDOMSTRING -e ECCI_AGENT_ID=combinet_agent -e ECCI_APP_TYPE=controller combinet_edge:v1
