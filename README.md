@@ -54,18 +54,13 @@ $ CUDA_VISIBLE_DEVICES=$GPU_ID python -m torch.distributed.launch \
     ./tools/train.py 
 ```
 
-**Note:**
-
-- Add Tracker to your PYTHON-PATH  `export PYTHONPATH=/path/to/ecc_edge:$PYTHONPATH`
-- Refer to [Pytorch distributed training](https://pytorch.org/docs/stable/distributed.html) for detailed description.
-
 
 ## Evaluation
 
 Before following steps, you should run **Emqx**  in docker to support the communication between edge and cloud container. The command is: 
 
 ```
-$ docker run -d --name ecc_broker -p {YOUR_EMQX_PORT}:1883 emqx/emqx:v4.1.1
+$ docker run -d --name combinet_broker -p {YOUR_EMQX_PORT}:1883 emqx/emqx:v4.1.1
 ```
 
 For the edge, we use the following commend to run the `./CombiNet/edge/ssd_edge/tools/eval.py` and the corresponding docker environment for starting the edge docker
