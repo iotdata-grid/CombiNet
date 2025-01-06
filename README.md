@@ -79,3 +79,32 @@ $ docker build -f Dockerfile -t combinet_cloud:v1 .
 $ . start_cloud.sh
 ```
 
+## Main Results
+
+<table>
+    <tr>
+        <th>Deployement</th><th>Methods</th><th>E2E Latency</th><th>mAP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">Edge-only</td><td>SSD</td><td>148ms</td><td>58.4</td>
+    </tr>
+    <tr>
+        <td>Looking</td><td>139ms</td><td>59.1</td>
+    </tr>
+    <tr>
+        <td>CombiNet</td><td>56ms</td><td>51.8</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Cloud-only</td><td>SSD</td><td>172ms</td><td>58.4</td>
+    </tr>
+    <tr>
+        <td>Looking</td><td>205ms</td><td>59.1</td>
+    </tr>
+    <tr>
+        <td>CombiNet</td><td>133ms</td><td>51.8</td>
+    </tr>
+    <tr>
+        <td>Edge-cloud Collaboration</td><td>CombiNet</td><td>42ms</td><td>51.8</td>
+    </tr>
+</table>
+
