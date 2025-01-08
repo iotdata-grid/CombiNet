@@ -14,7 +14,7 @@ The implementation of CombiNet, which propose an edge-cloud collaborative branch
 
 ## Dataset
 
-Download Imagenet VID 2015 dataset from [here](http://bvisionweb1.cs.unc.edu/ILSVRC2017/download-videos-1p39.php). This is the link for ILSVRC2017 as the link for ILSVRC2015 seems to down now, and get list of training, validation and test dataset in [here](https://drive.google.com/drive/folders/1g_d0Cok10C035IM-csxj5Y_3nh-qYG3x?usp=sharing)。
+Download Imagenet VID 2015 dataset from [here](http://bvisionweb1.cs.unc.edu/ILSVRC2017/download-videos-1p39.php). This is the link for ILSVRC2017 and get list of training, validation and test dataset in [here](https://drive.google.com/drive/folders/1g_d0Cok10C035IM-csxj5Y_3nh-qYG3x?usp=sharing)。
 You can use your own custom dataset following the format of ILSVRC2017.
 
 
@@ -48,8 +48,8 @@ The SiamRPN come from below link. **Thanks for their open source work.**
 ```
 $ cd ./CombiNet/edge/ssd_edge/
 $ CUDA_VISIBLE_DEVICES=$GPU_ID python -m torch.distributed.launch \
-    --nproc_per_node=8 \
-    --master_port=2333 \
+    --nproc_per_node=$NODE$ \
+    --master_port=$PORT$ \
     --cfg config.yaml\
     ./tools/train.py 
 ```
@@ -60,7 +60,7 @@ $ CUDA_VISIBLE_DEVICES=$GPU_ID python -m torch.distributed.launch \
 Before following steps, you should run **Emqx**  in docker to support the communication between edge and cloud container. The command is: 
 
 ```
-$ docker run -d --name combinet_broker -p {YOUR_EMQX_PORT}:1883 emqx/emqx:v4.1.1
+$ docker run -d --name combinet_broker -p {YOUR_EMQX_PORT}:$PORT$ emqx/emqx:v4.1.1
 ```
 
 For the edge, we use the following commend to run the `./CombiNet/edge/ssd_edge/tools/eval.py` and the corresponding docker environment for starting the edge docker
