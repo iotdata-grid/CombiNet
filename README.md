@@ -14,7 +14,7 @@ The implementation of CombiNet, which propose an edge-cloud collaborative branch
 
 ## Dataset
 
-Download Imagenet VID 2015 dataset from [here](http://bvisionweb1.cs.unc.edu/ILSVRC2017/download-videos-1p39.php). This is the link for ILSVRC2017 and get list of training, validation and test dataset in [here](https://drive.google.com/drive/folders/1g_d0Cok10C035IM-csxj5Y_3nh-qYG3x?usp=sharing)。
+Download Imagenet VID 2015 dataset from [here](https://www.image-net.org/download.php). This is the link for ILSVRC2017 and get list of training, validation and test dataset in [here](https://drive.google.com/drive/folders/1g_d0Cok10C035IM-csxj5Y_3nh-qYG3x?usp=sharing)。
 You can use your own custom dataset following the format of ILSVRC2017.
 
 
