@@ -81,6 +81,7 @@ $ . start_cloud.sh
 
 
 ## Main Results
+The edge device employs the NVIDIA Jetson AGX Xavier and the cloud server utilizes the GeForce RTX 2080 Ti.
 
 <table>
     <tr>
